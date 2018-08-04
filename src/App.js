@@ -7,9 +7,6 @@ import Main from './Main';
 import './App.css'
 
 class BooksApp extends React.Component {
-  state = {
-    showSearchPage: false
-  }
 
   render() {
     return (
