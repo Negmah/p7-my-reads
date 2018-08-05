@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Book from './Book';
 
-/*this.props.books*/
 
 class Main extends Component {
     render() {
