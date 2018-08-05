@@ -17,14 +17,17 @@ class Main extends Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                         <ol className="books-grid">
-                        {/* filter books array and extract all books assigned to 'Currently Reading' shelf to a new array */}
-                        { 
+                        {/* filter books array and extract all books assigned to 'Currently Reading' shelf to a new array.
+                        Map over newly created 'books' array and put all values within a list */}
+                        {
                             this.props.books
                             .filter(book => book.shelf === 'currentlyReading')
+                            .map(book => (
+                                <li key = {book.id}>
+                                    <Book />
+                                </li>
+                            ))
                         }
-                        <li>
-                        <Book />
-                        </li>
                         </ol>
                     </div>
                     </div>
@@ -32,9 +35,17 @@ class Main extends Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                         <ol className="books-grid">
-                        <li>
-                        <Book />
-                        </li>
+                        {/* filter books array and extract all books assigned to 'Currently Reading' shelf to a new array.
+                        Map over newly created 'books' array and put all values within a list */}
+                        {
+                            this.props.books
+                            .filter(book => book.shelf === 'wantToRead')
+                            .map(book => (
+                                <li key = {book.id}>
+                                    <Book />
+                                </li>
+                            ))
+                        }
                         </ol>
                     </div>
                     </div>
@@ -42,9 +53,17 @@ class Main extends Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                         <ol className="books-grid">
-                        <li>
-                        <Book />
-                        </li>
+                        {/* filter books array and extract all books assigned to 'Currently Reading' shelf to a new array.
+                        Map over newly created 'books' array and put all values within a list */}
+                        {
+                            this.props.books
+                            .filter(book => book.shelf === 'read')
+                            .map(book => (
+                                <li key = {book.id}>
+                                    <Book />
+                                </li>
+                            ))
+                        }
                         </ol>
                     </div>
                     </div>
