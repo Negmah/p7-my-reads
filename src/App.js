@@ -19,11 +19,20 @@ class BooksApp extends React.Component {
     console.log(this.state.books);
   }
 
+  changeShelf = () => {
+    
+  }
+
   render() {
     return (
       <div className="app">
         <Main 
-          books={this.state.books}
+          books = {
+            this.state.books
+          }
+          changeShelf = {
+            this.state.changeShelf
+          }
         />
       </div>
     )
