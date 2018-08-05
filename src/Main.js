@@ -24,7 +24,10 @@ class Main extends Component {
                             .filter(book => book.shelf === 'currentlyReading')
                             .map(book => (
                                 <li key = {book.id}>
-                                    <Book />
+                                    {/* Declare variable 'book' in Book component to pass array created by map method*/}
+                                    <Book
+                                    book = {book}
+                                    />
                                 </li>
                             ))
                         }
@@ -42,7 +45,10 @@ class Main extends Component {
                             .filter(book => book.shelf === 'wantToRead')
                             .map(book => (
                                 <li key = {book.id}>
-                                    <Book />
+                                    {/* Declare variable 'book' in Book component to pass array created by map method*/}
+                                    <Book
+                                    book = {book}
+                                    />
                                 </li>
                             ))
                         }
@@ -60,7 +66,10 @@ class Main extends Component {
                             .filter(book => book.shelf === 'read')
                             .map(book => (
                                 <li key = {book.id}>
-                                    <Book />
+                                    {/* Declare variable 'book' in Book component to pass array created by map method*/}
+                                    <Book
+                                    book = {book}
+                                    />
                                 </li>
                             ))
                         }
