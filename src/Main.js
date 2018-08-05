@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Book from './Book';
 
+/*this.props.books*/
 
 class Main extends Component {
     render() {
+        console.log(this.props.books); //debugger
         return (
             <div className="list-books">
                 <div className="list-books-title">
@@ -15,6 +17,11 @@ class Main extends Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                         <ol className="books-grid">
+                        {/* filter books array and extract all books assigned to 'Currently Reading' shelf to a new array */}
+                        { 
+                            this.props.books
+                            .filter(book => book.shelf === 'currentlyReading')
+                        }
                         <li>
                         <Book />
                         </li>
