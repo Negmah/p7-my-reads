@@ -34,6 +34,7 @@ class BooksApp extends React.Component {
           books = {this.state.books}
           moveShelf = {this.moveShelf}
         />*/}
+        <Search />
         
       </div>
     )
