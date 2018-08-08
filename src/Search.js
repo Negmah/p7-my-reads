@@ -58,6 +58,12 @@ class Search extends Component {
                     {
                         this.state.searchedBooks.map(searchedBook => {
                             let shelf = 'none'; //make default shelf 'none'
+
+                            //search books array for matching book id and change shelves accordingly; if no id is matched, maintain 'none' as default shelf value
+
+                            this.props.books.map(book => (
+                                book.id === searchedBook.id ? shelf = book.shelf : ''
+                            ))
                             return(
                                 <li key = {searchedBook.id}>
                                 <Book 
