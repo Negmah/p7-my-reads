@@ -57,13 +57,13 @@ class Search extends Component {
                 <ol className="books-grid">
                     {
                         this.state.searchedBooks.map(searchedBook => {
-                            let shelf = 'none';
+                            let shelf = 'none'; //make default shelf 'none'
                             return(
                                 <li key = {searchedBook.id}>
                                 <Book 
                                     book = {searchedBook}
                                     moveShelf = {this.props.moveShelf}
-                                    currentShelf = {shelf}
+                                    currentShelf = {shelf} //set currentShelf to the value of the variable shelf
                                 />
                                 </li>
                             );
