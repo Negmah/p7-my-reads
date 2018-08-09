@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+
+//Stateless Functional Component
 const Book = (props) => {
 
-    const { moveShelf, book } = props;
+    const { moveShelf, book } = props; //Destructuring
     let bookThumbnail = book.imageLinks ? book.imageLinks.thumbnail : '';
 
     return (

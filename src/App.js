@@ -7,6 +7,9 @@ import Main from './Main';
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 
+
+
+
 class BooksApp extends React.Component {
   /* Create state for mutable data - books array */
   state = {
@@ -17,7 +20,7 @@ class BooksApp extends React.Component {
     BooksAPI.getAll().then((books) => {
       this.setState({ books })
     })
-    console.log(this.state.books);
+    console.log(this.state.books); //debugger
   }
 
     moveShelf = (book, shelf) => {
@@ -30,19 +33,19 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-
       <Route exact path="/" render={() => (
         <Main
-          books={this.state.books}
-          moveShelf={this.moveShelf}
+        books={this.state.books}
+        moveShelf={this.moveShelf}
         />
-      )} />
+      )}/>
 
       <Route path="/search" render={() => (
-        <Search moveShelf = {this.moveShelf} books={this.state.books}/>
-      )}
-      />
-        
+        <Search
+        moveShelf = {this.moveShelf}
+        books={this.state.books}
+        />
+      )}/>
       </div>
     )
   }
